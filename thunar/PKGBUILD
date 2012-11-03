@@ -16,7 +16,6 @@ optdepends=('tumbler: for thumbnail previews'
             'thunar-archive-plugin: create and deflate archives'
             'thunar-media-tags-plugin: view/edit id3/ogg tags')
 options=('!libtool')
-backup=('etc/polkit-1/localauthority/50-local.d/org.freedesktop.udisks.pkla')
 source=(http://archive.xfce.org/src/xfce/${pkgname}/1.4/Thunar-${pkgver}.tar.bz2
 	thunar-volume-patch)
 #md5sums=('ab6f728384c0d925b40afae2f41268f3'

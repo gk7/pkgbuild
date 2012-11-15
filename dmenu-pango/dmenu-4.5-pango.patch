@@ -32,7 +32,7 @@ diff -uN old/dmenu.1 dmenu-4.5/dmenu.1
 diff -uN old/dmenu.c dmenu-4.5/dmenu.c
 --- old/dmenu.c	2012-01-08 14:18:43.000000000 +0200
 +++ dmenu-4.5/dmenu.c	2012-07-15 23:34:53.062952659 +0300
-@@ -15,8 +15,13 @@
+@@ -15,8 +15,12 @@
 
  #define INTERSECT(x,y,w,h,r)  (MAX(0, MIN((x)+(w),(r).x_org+(r).width)  - MAX((x),(r).x_org)) \
                               * MAX(0, MIN((y)+(h),(r).y_org+(r).height) - MAX((y),(r).y_org)))
@@ -42,7 +42,6 @@ diff -uN old/dmenu.c dmenu-4.5/dmenu.c
 +#ifndef MAX
  #define MAX(a,b)              ((a) > (b) ? (a) : (b))
 +#endif
-+#define DEFFONT "Monospace 12"
 
  typedef struct Item Item;
  struct Item {
@@ -74,7 +73,7 @@ diff -uN old/dmenu.c dmenu-4.5/dmenu.c
 
  	dc = initdc();
 -	initfont(dc, font);
-+	initfont(dc, font ? font : DEFFONT);
++	initfont(dc, font);
 +	normcol = initcolor(dc, normfgcolor, normbgcolor);
 +	selcol = initcolor(dc, selfgcolor, selbgcolor);
 

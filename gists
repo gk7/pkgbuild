@@ -1,0 +1,23 @@
+#Create token
+# See 'scopes' on github wiki
+curl -u 'username' -d '{"scopes":["gist"],"note":"command line gist"}' https://api.github.com/authorizations
+
+#Using token
+curl -H "Authorization: token your_token" https://api.github.com/users/username/gists
+
+#post gist
+curl -v -H "Authorization: token your_token" -X POST --data-binary '{"files": {"testfile1.txt": {"content": "I did it?"}}}' https://api.github.com/gists | grep 'html_url'
+
+#query tokens
+curl -u "username:password" https://api.github.com/authorizations
+
+# delete token
+curl -u "username:password" -X DELETE https://api.github.com/authorizations/token_id_here
+
+# api url
+https://api.github.com/users/username/gists
+
+
+
+===================================================================================================================================================================
+

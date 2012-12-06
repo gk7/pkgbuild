@@ -1,4 +1,3 @@
-#!/bin/bash
 # Maintainer: Fredrik Haikarainen <fredrik.haikarainen@gmail.com>
 pkgname="lightscript"
 pkgver="0.3.6"

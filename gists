@@ -1,3 +1,4 @@
+# Author: illusionist
 #Create token
 # See 'scopes' on github wiki
 curl -u 'username' -d '{"scopes":["gist"],"note":"command line gist"}' https://api.github.com/authorizations

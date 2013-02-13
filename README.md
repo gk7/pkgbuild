@@ -1,4 +1,4 @@
 pkgbuild
 ========
 
-various pkgbuilds for archlinux
+Various pkgbuilds for archlinux

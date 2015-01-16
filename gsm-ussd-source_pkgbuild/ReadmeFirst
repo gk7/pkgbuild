@@ -1,0 +1,19 @@
+Edit /usr/bin/gsm-ussd
+Change line 45 to read:
+my $modemport       = '/dev/ttyUSB3';       #What you gave in wvdial.conf
+
+Change line 49 to read:
+my @ussd_queries    = ( '*111*6*2#' );      #Prepaid account balance query
+
+
+Then:
+edit /usr/bin/xussd
+Change line 297 to read:
+USSD_QUERY  = '*111*6*2#'
+
+Now run:
+sudo gsm-ussd --cleartext -d
+
+Now to check balance run everytime:
+sudo gsm-ussd --cleartext
+sudo gsm-ussd -c    #To cancel ussd session
